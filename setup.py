@@ -25,6 +25,7 @@ setup(
     entry_points={
         'console_scripts': [
             'perception = perception_ros.perception:main',
+            'integrated_controller = gazebo_environment.integrated:main',
         ],
     },
 )
