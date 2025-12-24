@@ -1,9 +1,8 @@
 from setuptools import find_packages, setup
-from glob       import glob
+from glob import glob
 import os
 
 package_name = 'perception_ros'
-
 
 setup(
     name=package_name,
@@ -13,6 +12,8 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name, ['Perception/model.pt']),
+        ('share/' + package_name, ['epoch_39.pt']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -23,7 +24,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-        'perception = perception_ros.perception:main',
+            'perception = perception_ros.perception:main',
         ],
     },
 )
